@@ -1,0 +1,142 @@
+package TrabalhoAP2_Package;
+/**
+ *
+ * @author Artur Martins
+ */
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Operadores {
+    
+    public static int[][] DefSizeMatriz (){
+        /* O DefSizeMatriz coleta a quantidade de linhas e colunas, e preenche
+        os elementos da matriz randomicamente*/
+        int matriz[][], Lsize = 1, Cosize = 1;
+        String text = "";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite o tamanho da linha da matriz quadrada:");
+        Lsize = scan.nextInt();
+        System.out.println("Digite o tamanho da coluna da matriz quadrada:");
+        Cosize= scan.nextInt();
+        if (Lsize != Cosize){
+            System.out.print("A Matriz nao é quadrada, digite valores iguais para linhas e colunas \n");
+            System.out.println("Digite o tamanho da linha da matriz quadrada:");
+            Lsize = scan.nextInt();
+            System.out.println("Digite o tamanho da coluna da matriz quadrada:");
+            Cosize= scan.nextInt();
+        }
+        matriz = new int [Lsize][Cosize];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                matriz[i][j]=(int)(Math.random()*(9-0));
+                text = text + String.valueOf(matriz[i][j]);
+            }
+            System.out.println(text);
+            text="";
+        }
+        
+        return matriz;
+    }
+    public static int Factorial(int num){
+    // Se num for igual a 0 (zero) então retorna 1.
+    if (num == 0)
+      return 1;
+    else    
+    /* Para qualquer outro número, calcula o seu valor multiplicado
+       pelo fatorial de seu antecessor. */
+    return num * Factorial(num - 1);
+    }
+    public static int program01(){
+    /*Colocar em ordem crescente as linhas de uma matriz*/  
+     
+        return 0;
+        
+    }
+    public static int programa02(){
+    /*Contar quantos números primos tem uma matriz*/    
+        
+        return 0;
+        
+    }
+    public static int[][] FatElementos(){
+    /* Calcular o fatorial de cada elemento de uma matriz*/
+        int[][] MatFatorial;
+        int[][] FactorialMatriz;
+        String text = "";
+        MatFatorial = DefSizeMatriz();
+        FactorialMatriz = new int [MatFatorial.length][MatFatorial[0].length];
+        for(int i = 0; i < MatFatorial.length; i++){
+            for(int j = 0; j < MatFatorial.length; j++){
+                FactorialMatriz[i][j] = Factorial(MatFatorial[i][j]);
+                text = text + String.valueOf(FactorialMatriz[i][j]);
+            }
+            System.out.println(text);
+            text="";
+        }
+        return FactorialMatriz;
+        
+    }
+    public static int ParElementos(){
+        /*Calcular quantos números pares tem em cada linha de uma matriz    */
+        int ParMat [][];
+        ParMat = DefSizeMatriz();
+        int SomaParLinha = 0;
+        for(int i = 0; i < ParMat.length ; i++){
+            SomaParLinha = 0;
+            for(int j = 0; j < ParMat.length ; j++){
+                if(ParMat[i][j] % 2 == 0) {
+                    SomaParLinha++;
+                }
+            }
+        System.out.println("A quantidade de numeros pares contidos na linha "+ (i+1) +" e: " +SomaParLinha+ "\n ");
+        }
+      return SomaParLinha;
+    }
+    public static int programa05(){
+    /*Calcular a soma do fatorial de uma determinada linha de uma matriz*/
+        
+        return 0;
+        
+    }
+    public static int ParMatrizTotal(){
+    /*Calcula quantos numeros pares existem dentro da matriz*/ 
+    int ParMatTotal [][];
+        ParMatTotal = DefSizeMatriz();
+        int SomaParTotal = 0;
+        
+        for(int i = 0; i < ParMatTotal.length; i++){
+            for(int j = 0; j < ParMatTotal.length; j++){
+                if(ParMatTotal[i][j] % 2 == 0) {
+                    SomaParTotal++;
+                }
+            }
+        }
+        System.out.println("O total de numeros pares contidos na Matriz eh: " +SomaParTotal+ "\n ");
+        return SomaParTotal;   
+    }
+    public static int programa07(){
+    /**/   
+    
+        return 0;
+        
+    }
+    public static int programa08(){
+    /**/   
+    
+        return 0;
+        
+    }
+    public static int programa09(){
+    /**/
+    
+        return 0;
+        
+    }
+    public static int programa10(){
+    /**/
+    
+        return 0;
+        
+    }
+}
