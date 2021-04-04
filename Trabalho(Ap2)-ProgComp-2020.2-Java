@@ -1,0 +1,45 @@
+package TrabalhoAP2_Package;
+
+
+import java.util.Scanner;
+/**
+ *
+ * @author Artur Martins
+ */
+public class TrabalhoAP2 {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int input;
+        do{
+            System.out.println("Digite um numero de 1 a 10 para selecionar um metodo: \n" +
+                    "01. Programa 01 - Ordena as linhas da matriz em modo Crescente. \n" +
+                    "02. Programa 02 - Verifica e Conta quantos Numeros Primos existem na matriz. \n" +
+                    "03. Programa 03 - Calcula o Fatorial de cada elemento da matriz. \n" +
+                    "04. Programa 04 - Verifica e Conta quantos Numeros Pares existem em determinada linha da matriz. \n" +
+                    "05. Programa 05 - Calcula a Soma do Fatorial de uma determinada coluna da matriz. \n" +
+                    "06. Programa 06 - Verifica e Conta quantos Numeros Pares existem dentro da matriz. \n" +
+                    "07. Programa 07 - \n" +
+                    "08. Programa 08 - \n" +
+                    "09. Programa 09 - \n" +
+                    "10. Programa 10 - \n" +
+                    "Digite 0 para sair do Programa ");
+            input = scan.nextInt();
+            if (input == 0) {
+            	 System.out.println("Bye bye!");
+            	 break;
+             }
+            switch(input){
+                case 1: ;
+                case 2: ;
+                case 3: Operadores.FatElementos();
+                case 4: Operadores.ParElementos();
+                case 5: ;
+                case 6: Operadores.ParMatrizTotal();
+                case 7: ;
+                case 8: ;
+                case 9: ;
+                case 10: ;
+            }
+        } while (input != 0);
+    }    
+}
